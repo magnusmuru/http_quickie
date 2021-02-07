@@ -16,7 +16,7 @@ public class HTTPServer {
 
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        HttpContext context = server.createContext("/magmur");
+        HttpContext context = server.createContext("/http");
         context.setHandler(HTTPServer::handleRequest);
         server.start();
     }
